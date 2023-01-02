@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<body>
+
+<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')"/>
+<p id="textFromApp">Android에서 받은 메세지 : </p>
+
+
+<script type="text/javascript">
+
+        function showAndroidToast(toast) {
+            Android.showToast(toast); <!-- WebAppInterface의 showToast() 사용 -->
+        }
+
+        function AndroidToSend(myString) {
+            document.getElementById('textFromApp').innerHTML = myString;
+        }
+
+</script>
+
+</body>
+</html>
+
