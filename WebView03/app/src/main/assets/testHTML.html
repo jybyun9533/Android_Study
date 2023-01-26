@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<body>
+<h1>testHTML입니다</h1>
+<h2>WebView 실행중</h2>
+<input type="text" value="naver.com" id="setUrl">
+<input type="submit" value="openWindow" onClick="windowOpen(setUrl.value)"/>
+
+
+<script type="text/javascript">
+
+
+        function windowOpen(myUrl) {
+            if(myUrl.indexOf("http://")==-1 && myUrl.indexOf("https://")==-1){
+                myUrl = "https://" + myUrl
+            }
+
+            var popOption = "top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=yes";
+            window.open(myUrl, popOption);
+
+        }
+
+
+
+</script>
+
+</body>
+</html>
+
